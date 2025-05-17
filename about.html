@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-image: url('abstract-white-background-modern-design-600nw-2478912715.webp'); /* Replace with your image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: rgb(15, 2, 2); /* Optional: ensures text is readable over background */
+}
+
+h1 {
+  color: #0c0000; /* Optional: overrides heading color for better contrast */
+}
+
+.about-section {
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.6); /* Dark semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.circular-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #ff6a00, #ee0979) border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circular-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+ 
+
+.logo {
+    font-size: 100px;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-right: 50px; 
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    padding: 10px 0;
+    margin-top: 10px;
+    justify-content:right;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #dd2476;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+  </style>
+</head>
+<body>
+  <header style="background-image: url('abc.webp'); background-size: cover; background-position: center;">
+    <div class="header-container">
+      <img src="zzuzu0.jpg" alt="Adventure Bike" class="circular-image">
+      <div class="logo">GadiWale</div>     
+    </div>
+  
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  <div class="about-section">
+    <h1>Welcome to GadiWale</h1>
+    <p>
+      At GadiWale, we're passionate about bikes and everything that makes them thrilling. Whether you're a seasoned rider or a first-time buyer, our platform is built to help you discover, compare, and choose the best motorcycle that fits your style and budget.
+    </p>
+
+    <h2>Our Mission</h2>
+    <p>
+      We aim to be your most trusted resource for two-wheeler information — offering unbiased reviews, real-world mileage data, expert insights, and the latest price updates across India.
+    </p>
+
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>Detailed bike specs and comparisons</li>
+      <li>Latest prices with city-wise updates</li>
+      <li>Expert and user reviews</li>
+      <li>EMI calculator and finance advice</li>
+      <li>Test ride bookings and dealership contacts</li>
+    </ul>
+
+    <h2>Our Story</h2>
+    <p>
+      Founded in 2025, our platform was created by a team of riders, reviewers, and automotive experts who believed that buying a bike should be fun, informed, and stress-free.
+    </p>
+
+    <h2>Get in Touch</h2>
+    <p>
+      Have a question, suggestion, or feedback? <a href="/contact">Contact us</a> — we'd love to hear from you!
+    </p>
+  </div>
+</body>
+</html>

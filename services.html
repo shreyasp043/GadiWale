@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bike Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+   body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  color: #333;
+}
+
+.services {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #ffffff, #f7f9fc);
+  max-width: 1200px;
+  margin: auto;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #1a1a1a;
+  position: relative;
+}
+
+.services h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #3498db;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #ffffff;
+  border: none;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #3498db33 10%, transparent 70%);
+  z-index: 0;
+  transition: transform 0.4s ease;
+  transform: scale(0);
+}
+
+.service-card:hover::before {
+  transform: scale(1.5);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+  max-width: 60px;
+  margin-bottom: 30px;
+  z-index: 1;
+  position: relative;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+  transform: rotate(6deg) scale(1.1);
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 15px;
+  z-index: 1;
+  position: relative;
+}
+
+.service-card ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+  color: #444;
+  z-index: 1;
+  position: relative;
+}
+
+.service-card ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.service-card ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #3498db;
+  font-size: 0.85rem;
+  top: 0;
+}
+
+@media (max-width: 600px) {
+  .services h2 {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card ul li {
+    font-size: 0.9rem;
+  }
+}
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.circular-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #ff6a00, #ee0979) border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circular-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+ 
+
+.logo {
+    font-size: 100px;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-right: 50px; 
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    padding: 10px 0;
+    margin-top: 10px;
+    justify-content:right;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #dd2476;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+  </style>
+</head>
+<body>
+    <header style="background-image: url('abc.webp'); background-size: cover; background-position: center;">
+        <div class="header-container">
+          <img src="zzuzu0.jpg" alt="Adventure Bike" class="circular-image">
+          <div class="logo">GadiWale</div>     
+        </div>
+      
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            
+          </ul>
+        </nav>
+      </header>
+
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+
+      <!-- Bike Financing -->
+      <div class="service-card">
+        <img src="Bike Financing.jpg" alt="Bike Financing">
+        <h3>Bike Financing</h3>
+        <ul>
+          <li>EMI Calculator</li>
+          <li>Loan Eligibility Checker</li>
+          <li>Partner Bank Offers</li>
+        </ul>
+      </div>
+
+      <!-- Bike Insurance -->
+      <div class="service-card">
+        <img src="Bike Insurance.jpg" alt="Bike Insurance">
+        <h3>Bike Insurance</h3>
+        <ul>
+          <li>Third-Party & Comprehensive Options</li>
+          <li>Instant Quotes</li>
+          <li>Renewal Reminders</li>
+        </ul>
+      </div>
+
+      <!-- Test Ride Booking -->
+      <div class="service-card">
+        <img src="Book a Test Ride.jpg" alt="Test Ride">
+        <h3>Book a Test Ride</h3>
+        <ul>
+          <li>Schedule at Dealership</li>
+          <li>Home Test Ride Available</li>
+        </ul>
+      </div>
+
+      <!-- Exchange/Trade-In -->
+      <div class="service-card">
+        <img src="Exchange.jpg" alt="Exchange Bike">
+        <h3>Exchange/Trade-In</h3>
+        <ul>
+          <li>Sell or Exchange Your Old Bike</li>
+          <li>Instant Online Valuation</li>
+        </ul>
+      </div>
+
+      <!-- Bike Servicing -->
+      <div class="service-card">
+        <img src="Bike Servicing.jpg" alt="Bike Servicing">
+        <h3>Bike Servicing</h3>
+        <ul>
+          <li>Book Service Appointments</li>
+          <li>View Service History</li>
+          <li>Pickup & Drop Options</li>
+        </ul>
+      </div>
+
+      <!-- On-Road Price -->
+      <div class="service-card">
+        <img src="on road.jpg" alt="On-Road Price">
+        <h3>On-Road Price Check</h3>
+        <ul>
+          <li>City-wise Breakdown</li>
+          <li>RTO, Insurance & Taxes Included</li>
+        </ul>
+      </div>
+
+      <!-- Accessories -->
+      <div class="service-card">
+        <img src="Spare Parts & Accessories.jpg" alt="Accessories">
+        <h3>Spare Parts & Accessories</h3>
+        <ul>
+          <li>Genuine Bike Parts</li>
+          <li>Riding Gear (Helmets, Jackets)</li>
+          <li>Customization Options</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
